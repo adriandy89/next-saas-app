@@ -21,7 +21,9 @@ export default function RootLayout({
             <Navbar />
             <main className="w-full h-full flex flex-col md:flex-row flex-grow overflow-hidden">
               <Sidebar />
-              <div className="w-full h-full overflow-auto">{children}</div>
+              <div className="w-full h-full overflow-auto bg-slate-200">
+                {children}
+              </div>
             </main>
           </body>
         </RecoilRoot>

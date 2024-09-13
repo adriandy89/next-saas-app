@@ -4,7 +4,7 @@ import { getSession, withApiAuthRequired } from "@auth0/nextjs-auth0";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2023-08-16",
+  apiVersion: "2024-06-20",
   typescript: true,
 });
 
@@ -35,12 +35,10 @@ export const POST = withApiAuthRequiredExtended(
         payment_intent_data: {
           metadata: {
             uid: user.sub,
-            
           },
         },
         metadata: {
           uid: user.sub,
-          
         },
       });
 

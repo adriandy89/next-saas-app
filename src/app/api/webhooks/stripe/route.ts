@@ -36,7 +36,7 @@ export async function POST(request: NextRequest, response: NextResponse) {
         } else {
           await db
             .collection("profiles")
-            .updateOne({ uid: uid }, { $inc: { credits: 10 } });
+            .updateOne({ uid: uid }, { $inc: { credits: 100 } });
         }
         break;
       default:

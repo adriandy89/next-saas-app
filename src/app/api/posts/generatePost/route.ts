@@ -38,7 +38,7 @@ export const POST = withApiAuthRequiredExtended(
       });
 
       const _generateTitle = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o-mini",
         messages: [
           {
             role: "system",
@@ -59,7 +59,7 @@ export const POST = withApiAuthRequiredExtended(
       const titleResponse = _generateTitle.choices[0]?.message?.content;
 
       const _generatePost = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o-mini",
         messages: [
           {
             role: "system",

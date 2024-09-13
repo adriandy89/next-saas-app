@@ -139,15 +139,11 @@ export default withPageAuthRequired(function Page() {
             type="submit"
             className="bg-indigo-600 w-fit text-white px-4 py-2 rounded-md mt-4 hover:bg-indigo-500 transition-all
                 cursor-pointer"
+            disabled={isWaitingForResponse}
           >
             Submit
           </button>
         </form>
-        {isWaitingForResponse && hasSubmitted && (
-          <div className="w-full flex flex-col gap-4 mt-4 items-center">
-            <LoaderCircleIcon className="animate-spin w-8 h-8 text-indigo-600" />
-          </div>
-        )}
         {isWaitingForResponse && hasSubmitted && (
           <div className="w-full flex flex-col gap-4 mt-4 items-center">
             <LoaderCircleIcon className="animate-spin w-8 h-8 text-indigo-600" />
