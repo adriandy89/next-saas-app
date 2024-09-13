@@ -32,7 +32,8 @@ export default function Sidebar() {
               <div className="absolute block md:hidden h-2 w-full rounded-full -top-2 left-0 bg-indigo-500"></div>
             </>
           )}
-          {memoizedIcons[item.route]} <span className="ml-2">{item.text}</span>
+          {memoizedIcons[item.route]}
+          <span className="ml-2">{item.text}</span>
         </Link>
       ))}
     </div>
