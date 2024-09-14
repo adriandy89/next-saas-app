@@ -13,7 +13,7 @@ export default function Post({ post, handleDeletePost }: Props) {
     handleDeletePost(post._id);
   }
   return (
-    <div className="w-full flex flex-col gap-4 shadow-sm p-4 rounded-xl bg-white">
+    <div className="w-full flex flex-col gap-4 shadow-sm p-4 rounded-xl  bg-slate-50">
       <h1 className="text-2xl px-4 font-bold text-center text-gray-800">
         {post.title}
       </h1>
